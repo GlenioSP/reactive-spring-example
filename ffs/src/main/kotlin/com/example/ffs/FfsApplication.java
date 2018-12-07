@@ -34,7 +34,7 @@ public class FfsApplication {
     ApplicationRunner demoData(MovieRepository movieRepository) {
         return args -> {
             movieRepository.deleteAll().thenMany(
-            Flux.just("The Silence of the Lambdas", "Back to the Future",
+            Flux.just("Field of Flux", "The Silence of the Lambdas", "Back to the Future",
                       "AEon Flux", "Meet the Fluxers", "The Fluxxinator",
                       "Flux Gordon", "Y Tu Mono Tambien")
                 .map(Movie::new)
